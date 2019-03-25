@@ -5,13 +5,11 @@ import ru.avalon.java.dev.j10.labs.models.Passport;
 
 class Main  {
 
-
     Person ivanov = null;
     Person smith = null;
 
 public static void main(String args[]) {
     
-
     Person ivanov =new Person("Иван", false, true, "Иванов");
     Person smith = new Person("John", true, false, "Smith");
     
@@ -24,11 +22,7 @@ public static void main(String args[]) {
             " Первая", " Санкт-Петербург");
     Address smithAddress = new Address("прописан и проживает:", " 222", " 22",
             " Вторая", " Москва");
-
- 
- 
-
-     
+   
    System.out.println(ivanov.name + " " + true + true + " " + ivanov.surName);
    
    System.out.println(ivanovPassport.getBirthday() + " года рождения, паспорт"
@@ -38,11 +32,9 @@ public static void main(String args[]) {
            + " кв." + ivanovAddress.getNumberOfApartments() + ", дом" + 
            ivanovAddress.getHouseNumber() + ", ул." + ivanovAddress.getStreet()
            + ", г." + ivanovAddress.getCity() +".");
-   
-   
+    
    System.out.println(smith.name + " " + true + false + " " + smith.surName);
-   
-   
+      
    System.out.println(smithPassport.getBirthday() + " года рождения, паспорт " 
            + smithPassport.getSerialNumber()  + 
            ", выдан " + smithPassport.getIssueDate() + " " + 
@@ -51,8 +43,6 @@ public static void main(String args[]) {
            smithAddress.getHouseNumber() + ", ул." + smithAddress.getStreet()
            + ", г." + smithAddress.getCity() +".");
    
-   
-
         }   
  
 }

@@ -30,21 +30,17 @@ public class Passport {
         this.serialNumber = serialNumber;
         this.issueDate = issueDate;
         this.org = org;
-        }
-        
+        }      
     public Passport() {
         this("21.03.2019", "серия номер", "11.03.2019г.", "РУВД"); 
         
-        }
-        
+        }     
     public String getBirthday() {
         return birthday;
     }
-
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
-
     public String getSerialNumber() {
         return serialNumber;
     }
@@ -52,19 +48,15 @@ public class Passport {
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
     }
-
     public String getIssueDate() {
         return issueDate;
     }
-
     public void setIssueDate(String issueDate) {
         this.issueDate = issueDate;
     }
-
     public String getOrg() {
         return org;
     }
-
     public void setOrg(String org) {
         this.org = org;
     }
