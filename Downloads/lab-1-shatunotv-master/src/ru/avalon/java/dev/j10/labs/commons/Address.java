@@ -31,8 +31,8 @@ public class Address {
     }
 
     public void setFullAddress(String registration) {
-        this.fullAddress = fullAddress;
-        this.fullAddress = numberOfApartments +  houseNumber + street + city;
+        
+   
     }
 
     public String getCity() {

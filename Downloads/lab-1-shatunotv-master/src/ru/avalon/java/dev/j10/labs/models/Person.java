@@ -12,92 +12,60 @@ package ru.avalon.java.dev.j10.labs.models;
 public class Person {
     
     public String name;
-    public static Boolean secondName;
-    public static Boolean fatherName;
+    public String secondName;
+    public String fatherName;
     public String surName;
     public Person ivanov;
     public Person smith;
     public String fullName;
 
-      public Person(String name, Boolean secondName, Boolean fatherName, String surName) {
+      public Person(String name, String surName) {
         this.name = name;
-        //this.secondName = secondName;
-        //this.fatherName = fatherName;
         this.surName = surName;
     }
     public Person() {
-        this("имя", true, false, "фамилия"); 
+      this("имя", "фамилия"); 
        
     }
-    public static void info(Person smith, Person ivanov){
-            String sString = null;
-            String fString = null;
-            
-        
-        if (secondName) {
-            sString = "Edvard";
-            fString = " ";
-        } else if (fatherName) {
-            sString = " ";
-            fString = "Иванович";
-        } else 
-           sString = " ";
-           fString = " ";
-    
+     
+   public String getFullName(){
 
-           
-          // System.out.println(ivanov.name + " " + fString + ivanov.surName);
-         //  System.out.println(smith.name + sString + " " + smith.surName);
-        
-      }    
+        if (secondName != null) {
+            return name  + " " + secondName.charAt(0) + ". " + surName;
+        } else if (secondName == null && fatherName == null) {
+            return name + " " + "" + surName;
+        } else {
+           return surName + " " + name + " " + fatherName;
+        } 
+    
+      } 
+
     public String getName(){
         return name;
         
    }
     public void setName(String name) {
         this.name = name;
-       ivanov.name = "Иван";
-       smith.name = "John";
     }
-    public Boolean isSecondName() {
+    public String getSecondName() {
         return secondName;
     }
-    public void setSecondName(Boolean secondName) {
+    public void setSecondName(String secondName) {
         this.secondName = secondName;
-        ivanov.secondName = false;
-        smith.secondName = true;
+
     }
-     public Boolean isFatherName() {
+     public String getFatherName() {
         return fatherName;
     }
 
-    public void setFatherName(Boolean fatherName) {
+    public void setFatherName(String fatherName) {
         this.fatherName = fatherName;
-        ivanov.fatherName = true;
-        smith.fatherName = false;
+
     }
    public String getSurName() {
         return surName;
    }
     public void setSurName(String surName) {
        this.surName = surName;
-       smith.surName = "Smith";
-       ivanov.surName = "Иванов";
-        
     }
-    public String getFullName(){
-        return fullName;
-
-    }
-    public String setFullName(String fullName){ 
-       // return name + secondName + fatherName + surName;
-       this.fullName = fullName;
-       //name + secondName + fatherName + surName;
-       this.ivanov.fullName = name + " " + fatherName + surName;
-       this.smith.fullName = name + secondName + " " + surName;
-       return fullName;
-       
-    }
-    
-
 }

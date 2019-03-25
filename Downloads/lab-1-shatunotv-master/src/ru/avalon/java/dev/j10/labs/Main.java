@@ -5,13 +5,18 @@ import ru.avalon.java.dev.j10.labs.models.Passport;
 
 class Main  {
 
-    Person ivanov = null;
-    Person smith = null;
-
+//Person ivanov = null;
+//Person smith = null;
+  String ivanovFullName;  
+    
+    
 public static void main(String args[]) {
     
-    Person ivanov =new Person("Иван", false, true, "Иванов");
-    Person smith = new Person("John", true, false, "Smith");
+          Person ivanov = new Person ("Иван", "Иванов");
+          Person smith = new Person("John", "Smith");
+          ivanov.setFatherName("Иванович");
+          smith.setSecondName("Edvard");
+
     
     Passport ivanovPassport = new Passport("11.11.2011", "1111 111111", 
             "11.11.2019г.", "РУВД города Санкт-Петербурга");
@@ -23,7 +28,8 @@ public static void main(String args[]) {
     Address smithAddress = new Address("прописан и проживает:", " 222", " 22",
             " Вторая", " Москва");
    
-   System.out.println(ivanov.name + " " + true + true + " " + ivanov.surName);
+
+   System.out.println(ivanov.getFullName());
    
    System.out.println(ivanovPassport.getBirthday() + " года рождения, паспорт"
            + " " + ivanovPassport.getSerialNumber()  + 
@@ -33,7 +39,7 @@ public static void main(String args[]) {
            ivanovAddress.getHouseNumber() + ", ул." + ivanovAddress.getStreet()
            + ", г." + ivanovAddress.getCity() +".");
     
-   System.out.println(smith.name + " " + true + false + " " + smith.surName);
+   System.out.println(smith.getFullName());
       
    System.out.println(smithPassport.getBirthday() + " года рождения, паспорт " 
            + smithPassport.getSerialNumber()  + 
