@@ -16,7 +16,6 @@ package ru.avalon.java.dev.j10.labs.models;
  * </ol>
  */
 public class Passport {
-
     
     String birthday;
     String serialNumber;
