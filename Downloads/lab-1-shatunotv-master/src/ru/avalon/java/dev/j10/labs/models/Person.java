@@ -10,6 +10,8 @@ package ru.avalon.java.dev.j10.labs.models;
  * @author sany
  */
 public class Person {
+    
+    
     public String name;
     public static Boolean secondName;
     public static Boolean fatherName;

@@ -17,6 +17,7 @@ package ru.avalon.java.dev.j10.labs.models;
  */
 public class Passport {
 
+    
     String birthday;
     String serialNumber;
     String issueDate;

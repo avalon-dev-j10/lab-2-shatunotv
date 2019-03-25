@@ -8,6 +8,7 @@ class Main  {
     Person ivanov = null;
     Person smith = null;
 
+    
 public static void main(String args[]) {
     
     Person ivanov =new Person("Иван", false, true, "Иванов");
