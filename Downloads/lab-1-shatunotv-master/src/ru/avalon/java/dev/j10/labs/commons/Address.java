@@ -24,7 +24,7 @@ public class Address {
    
 
     public String getFullAddress() {
-        return " кв." + numberOfApartments + ", дом" + houseNumber + ", ул." + 
+        return "прописан и проживает:" + " кв." + numberOfApartments + ", дом" + houseNumber + ", ул." + 
                 street + ", г." + city;
     }
 

@@ -34,15 +34,19 @@ public static void main(String args[]) {
    System.out.println(ivanovPassport.getBirthday() + " года рождения, паспорт"
            + " " + ivanovPassport.getSerialNumber()  + 
            ", выдан " + ivanovPassport.getIssueDate() + " " + 
-           ivanovPassport.getOrg() + ", " + ivanovAddress.getFullAddress());
+           ivanovPassport.getOrg());
     
+   System.out.println(ivanovAddress.getFullAddress());
+   
    System.out.println(smith.getFullName());
       
    System.out.println(smithPassport.getBirthday() + " года рождения, паспорт " 
            + smithPassport.getSerialNumber()  + 
            ", выдан " + smithPassport.getIssueDate() + " " + 
-           smithPassport.getOrg() + ", " + smithAddress.getFullAddress());
+           smithPassport.getOrg());
    
+   
+   System.out.println(smithAddress.getFullAddress());
         }   
  
 }
