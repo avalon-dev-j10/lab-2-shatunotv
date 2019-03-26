@@ -23,9 +23,9 @@ public static void main(String args[]) {
     Passport smithPassport = new Passport("22.02.2012", "2222 222222", 
             "22.02.2019г.", "РУВД города Москва");
     
-    Address ivanovAddress = new Address("прописан и проживает:", " 111", " 11",
+    Address ivanovAddress = new Address(" 111", " 11",
             " Первая", " Санкт-Петербург");
-    Address smithAddress = new Address("прописан и проживает:", " 222", " 22",
+    Address smithAddress = new Address(" 222", " 22",
             " Вторая", " Москва");
    
 
@@ -34,20 +34,14 @@ public static void main(String args[]) {
    System.out.println(ivanovPassport.getBirthday() + " года рождения, паспорт"
            + " " + ivanovPassport.getSerialNumber()  + 
            ", выдан " + ivanovPassport.getIssueDate() + " " + 
-           ivanovPassport.getOrg() + ", " + ivanovAddress.getFullAddress()
-           + " кв." + ivanovAddress.getNumberOfApartments() + ", дом" + 
-           ivanovAddress.getHouseNumber() + ", ул." + ivanovAddress.getStreet()
-           + ", г." + ivanovAddress.getCity() +".");
+           ivanovPassport.getOrg() + ", " + ivanovAddress.getFullAddress());
     
    System.out.println(smith.getFullName());
       
    System.out.println(smithPassport.getBirthday() + " года рождения, паспорт " 
            + smithPassport.getSerialNumber()  + 
            ", выдан " + smithPassport.getIssueDate() + " " + 
-           smithPassport.getOrg() + ", " + smithAddress.getFullAddress() + 
-           " кв." + smithAddress.getNumberOfApartments() + ", дом" + 
-           smithAddress.getHouseNumber() + ", ул." + smithAddress.getStreet()
-           + ", г." + smithAddress.getCity() +".");
+           smithPassport.getOrg() + ", " + smithAddress.getFullAddress());
    
         }   
  

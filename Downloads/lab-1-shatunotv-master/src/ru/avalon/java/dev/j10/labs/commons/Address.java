@@ -10,10 +10,10 @@ public class Address {
     Address ivanovAddress;
     Address smithAddress;
    
-    public Address(String fullAddress, String numberOfApartments, String houseNumber,
+    public Address(String numberOfApartments, String houseNumber,
             String street, String city) {
 
-        this.fullAddress = fullAddress;
+        
         this.numberOfApartments = numberOfApartments;
         this.houseNumber = houseNumber;
         this.street = street;
@@ -21,16 +21,14 @@ public class Address {
         
     }
 
-    public Address() {
-        this("прописка", "квартира", "дом", "улица", "город");
-
-}    
+   
 
     public String getFullAddress() {
-        return fullAddress;
+        return " кв." + numberOfApartments + ", дом" + houseNumber + ", ул." + 
+                street + ", г." + city;
     }
 
-    public void setFullAddress(String registration) {
+   public void setFullAddress() {
         
    
     }
