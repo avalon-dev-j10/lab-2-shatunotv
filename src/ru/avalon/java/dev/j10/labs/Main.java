@@ -1,11 +1,32 @@
 package ru.avalon.java.dev.j10.labs;
 
-import ru.avalon.java.dev.j10.labs.shapes.Shape;
+
+import ru.avalon.java.dev.j10.labs.shapes.*;
 
 public class Main {
+    
+Shape[] shapes = null;
+
+int i;
+
+/*  TODO (Замечания№1 ЛР№2)
+    - Лишние поля класса удалить - данное i нигде не используется!
+*/
 
     public static void main(String[] args) {
-        Shape[] shapes = null;
+        
+        //массив фигур
+        Figure[] figures = new Figure[10];
+        figures[0] = new Rectangle();
+        figures[1] = new Triangle();
+        figures[2] = new Triangle();
+        figures[3] = new Circle();
+        figures[4] = new Circle();
+        figures[5] = new Triangle();
+        figures[6] = new Circle();
+        figures[7] = new Rectangle();
+        figures[8] = new Rectangle();
+        figures[9] = new Rectangle();
 
         /*
          * TODO: Выполнить действия над массивом 'shapes'
@@ -19,5 +40,25 @@ public class Main {
          *    площадью. Для поиска фигуры необходимо создать
          *    статический метод в текущем классе (Main).
          */
+
+//выбор наибольшей площади фигур
+
+        Figure maxArea = null;
+        for (int i = 0; i < figures.length; i++) {
+            System.out.println(figures[i].getClass().getSimpleName() + " Площадь фигуры = "  + figures[i].getArea());
+
+            if (maxArea != null) {
+                if (figures[i].getArea() > maxArea.getArea()) {
+                    maxArea = figures[i];
+                }
+            } else {
+                maxArea = figures[i];
+            }
+        }
+
+        
+        System.out.println("Фигура с максимальной площадью " + maxArea.getClass().getSimpleName() + " Площадь: " + maxArea.getArea());
     }
-}
+
+   
+    }

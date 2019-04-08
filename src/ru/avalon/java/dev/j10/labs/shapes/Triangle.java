@@ -1,8 +1,11 @@
 package ru.avalon.java.dev.j10.labs.shapes;
 
+import static java.lang.Math.sin;
+
 /**
  * Представление о треугольнике.
  * <p>
+ * 
  * Треуго́льник (в евклидовом пространстве) — геометрическая
  * фигура, образованная тремя отрезками, которые соединяют
  * три точки, не лежащие на одной прямой. Указанные три
@@ -14,11 +17,71 @@ package ru.avalon.java.dev.j10.labs.shapes;
  *
  * @see <a href="https://ru.wikipedia.org/wiki/%D0%A2%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA">Треугольник</a>
  */
-public class Triangle {
+//класс наследует интерфейсы
 
+public class Triangle implements Shape, Polygon {
+    
+    /*  TODO (Замечания№1 ЛР№2)
+        - Подключены не все интерфейсы! Исправить!
+    */
+    
+    Triangle triangle;
+    private float side1;
+    private float side2;
+    private float side3;
+    public  float area;
+    private int angle;
+    private float perimeter;
+    
+    /*  TODO (Замечания№1 ЛР№2)
+        - Некоторые поля лишние, area и perimeter вычисляются при вызове, так стороны
+        треугольника могут меняться! Убрать лишнее!
+    */
+    
+        //генерация случайных чисел
+    public Triangle() {
+        
+        side1 = (float) (100 * Math.random());
+        side1 = (float) (100 * Math.random());
+        side1 = (float) (100 * Math.random());
+        angle = (int) (360 * Math.random());
+        
+        
+        /*  TODO (Замечания№1 ЛР№2)
+            - Одна сторона треугольника вычисляется 3 раза! Исправить!
+            - При рандомном созаднии сторон треугольника соблюдай главное правило
+            треугольника - сумма любых двух сторон треугольника всегда больше третьей!
+        */
+    }
+    
+   // реализация абстрактных методов интерфейсов
+    public float getArea() {
+       return area = (float) (side1 * side2 / 2 * sin(angle));
+       /*  TODO (Замечания№1 ЛР№2)
+            - "area =" здесь не надо! Убрать лишнее!
+            - angle это угол наклона фигуры а не угол в треугольнике! Исправить!
+            - Если задаешь 3 стороны треугольника, то площадь треугольника необходимо
+            вычислять по формуле Герона!
+        */
+    
+    }
+    
+    public float getPerimeter() {
+        return perimeter = (side1 + side2 + side3);
+        /*  TODO (Замечания№1 ЛР№2)
+            - "perimeter =" здесь не надо! Убрать лишнее!
+        */
+    }
+    
+    
+    public int getRotation() {
+        return angle;
+    }
+}
     /*
      * TODO: Реализовать класс 'Triangle'
      * 1. Используйте наследование.
      * 2. Реализуйте все абстрактные методы.
      */
-}
+
+
