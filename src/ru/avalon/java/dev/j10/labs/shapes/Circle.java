@@ -18,6 +18,12 @@ public class Circle implements Shape, Point, Ellipse, Figure {
     public float area;
     private float x;
     private float y;
+    
+    /*  TODO (Замечания№1 ЛР№2)
+        - Некоторые поля лишние, area и length вычисляются при вызове, так как радиус
+        может меняться! Убрать лишнее!
+    */ 
+    
         //генерация случайных чисел
      public Circle() {
         radius = (float) (100 * Math.random());
@@ -26,6 +32,9 @@ public class Circle implements Shape, Point, Ellipse, Figure {
 
     public float getArea() {
         return area = (float) (PI * radius * radius);
+        /*  TODO (Замечания№1 ЛР№2)
+            - "area =" здесь не надо! Убрать лишнее!
+        */
     }
 
    
@@ -46,13 +55,17 @@ public class Circle implements Shape, Point, Ellipse, Figure {
     
     public double getR() {
         return radius = (float) Math.sqrt(area/PI);
-                
-                
+        /*  TODO (Замечания№1 ЛР№2)
+            - Зачем вычислять радиус, если он у тебя уже есть! Убрать лишнее!
+        */        
     }
 
     public float getLength() {
         return length = (float) (2*PI*radius);
-        }
+        /*  TODO (Замечания№1 ЛР№2)
+            - "length =" здесь не надо! Убрать лишнее!
+        */ 
+    }
     
     
 }

@@ -21,6 +21,10 @@ import static java.lang.Math.sin;
 
 public class Triangle implements Shape, Polygon {
     
+    /*  TODO (Замечания№1 ЛР№2)
+        - Подключены не все интерфейсы! Исправить!
+    */
+    
     Triangle triangle;
     private float side1;
     private float side2;
@@ -28,6 +32,12 @@ public class Triangle implements Shape, Polygon {
     public  float area;
     private int angle;
     private float perimeter;
+    
+    /*  TODO (Замечания№1 ЛР№2)
+        - Некоторые поля лишние, area и perimeter вычисляются при вызове, так стороны
+        треугольника могут меняться! Убрать лишнее!
+    */
+    
         //генерация случайных чисел
     public Triangle() {
         
@@ -35,17 +45,32 @@ public class Triangle implements Shape, Polygon {
         side1 = (float) (100 * Math.random());
         side1 = (float) (100 * Math.random());
         angle = (int) (360 * Math.random());
-
+        
+        
+        /*  TODO (Замечания№1 ЛР№2)
+            - Одна сторона треугольника вычисляется 3 раза! Исправить!
+            - При рандомном созаднии сторон треугольника соблюдай главное правило
+            треугольника - сумма любых двух сторон треугольника всегда больше третьей!
+        */
     }
     
    // реализация абстрактных методов интерфейсов
     public float getArea() {
        return area = (float) (side1 * side2 / 2 * sin(angle));
+       /*  TODO (Замечания№1 ЛР№2)
+            - "area =" здесь не надо! Убрать лишнее!
+            - angle это угол наклона фигуры а не угол в треугольнике! Исправить!
+            - Если задаешь 3 стороны треугольника, то площадь треугольника необходимо
+            вычислять по формуле Герона!
+        */
     
     }
     
     public float getPerimeter() {
-        return perimeter = (side1+side2+side3);
+        return perimeter = (side1 + side2 + side3);
+        /*  TODO (Замечания№1 ЛР№2)
+            - "perimeter =" здесь не надо! Убрать лишнее!
+        */
     }
     
     

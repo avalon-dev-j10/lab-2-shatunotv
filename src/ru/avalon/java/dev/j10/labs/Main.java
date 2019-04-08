@@ -9,6 +9,10 @@ Shape[] shapes = null;
 
 int i;
 
+/*  TODO (Замечания№1 ЛР№2)
+    - Лишние поля класса удалить - данное i нигде не используется!
+*/
+
     public static void main(String[] args) {
         
         //массив фигур
@@ -41,7 +45,7 @@ int i;
 
         Figure maxArea = null;
         for (int i = 0; i < figures.length; i++) {
-            System.out.println(figures[i] + " Площадь фигуры = "  + figures[i].getArea());
+            System.out.println(figures[i].getClass().getSimpleName() + " Площадь фигуры = "  + figures[i].getArea());
 
             if (maxArea != null) {
                 if (figures[i].getArea() > maxArea.getArea()) {
@@ -53,7 +57,7 @@ int i;
         }
 
         
-        System.out.println("Фигура с максимальной площадью " + maxArea + " Площадь: " + maxArea.getArea());
+        System.out.println("Фигура с максимальной площадью " + maxArea.getClass().getSimpleName() + " Площадь: " + maxArea.getArea());
     }
 
    

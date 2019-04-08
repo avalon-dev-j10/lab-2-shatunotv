@@ -12,14 +12,22 @@ package ru.avalon.java.dev.j10.labs.shapes;
 
 public class Rectangle implements Shape, Figure {
     
+    /*  TODO (Замечания№1 ЛР№2)
+        - Подключены не все интерфейсы! Исправить!
+    */
+    
     public float area; //площадь
     private float perimeter; //периметр
     private int angle; // угол
     private float length; //длина
     private float width; //ширина
     
-    //генерация случайных чисел
+    /*  TODO (Замечания№1 ЛР№2)
+        - Некоторые поля лишние, area и perimeter вычисляются при вызове, так как ширина 
+        и длина может меняться! Убрать лишнее!
+    */
     
+    //генерация случайных чисел
      public Rectangle() {
         length = (float) (100 * Math.random());
         width = (float) (100 * Math.random());
@@ -28,10 +36,16 @@ public class Rectangle implements Shape, Figure {
         // реализация абстрактных методов интерфейсов
     public float getArea() {
        return area = (length*width);
+       /*  TODO (Замечания№1 ЛР№2)
+            - "area =" здесь не надо! Убрать лишнее!
+        */
     }
     
     float getPerimeter() {
-        return perimeter = (length+length+width+width);
+        return perimeter = (length + length + width + width);
+        /*  TODO (Замечания№1 ЛР№2)
+            - "perimeter =" здесь не надо! Убрать лишнее!
+        */
     }
     
     public int getRotation() {
